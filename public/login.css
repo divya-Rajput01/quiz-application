@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://t3.ftcdn.net/jpg/05/88/24/10/360_F_588241010_cdQJ2QTsyDtt36jZsAFR45aAXICnPAzR.jpg");
+    background-size: cover;
+}
+
+h2 {
+    color: white;
+}
+
+.loginContainer input {
+    border-radius: 5px;
+    margin: 3px;
+    padding: 5px;
+    width: 250px;
+    padding-left: 10px;
+}
+
+.loginContainer button {
+    padding: 5px;
+    width: 100px;
+    border-radius: 4px;
+}
+
+.loginContainer input:hover {
+    background-color: gainsboro;
+}
+
+.loginContainer button:hover {
+    background-color: gainsboro;
+}

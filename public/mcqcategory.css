@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://t3.ftcdn.net/jpg/05/88/24/10/360_F_588241010_cdQJ2QTsyDtt36jZsAFR45aAXICnPAzR.jpg");
+    background-size: cover;
+}
+
+a{
+    text-decoration: none;
+    font-size: 25px;
+    color: blue;
+}
+a:hover{
+    color: rgb(0, 119, 255);
+}

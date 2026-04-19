@@ -1,0 +1,31 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-82976.jpg?semt=ais_hybrid&w=740&q=80");
+    background-size: cover;
+}
+
+.resultpage {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid gray;
+    width: 500px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 30px;
+    background-color: lavender;
+
+}
+
+p {
+    font-size: 40px;
+    font-weight: 300;
+}

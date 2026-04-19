@@ -1,0 +1,32 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-image: url("https://img.freepik.com/free-vector/neon-quiz-show-frame-brick-wall_1308-181066.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quizContainer {
+    width: 530px;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+
+.quizContainer button:hover {
+    background-color: gainsboro;
+}
+
+.quizContainer button {
+    margin-right: 40px;
+    padding: 3px;
+    border-radius: 4px;
+    border: 1px solid gray;
+    width: 8vw;
+
+}

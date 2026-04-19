@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+    <div class="quizContainer">
+        <h1 id="timer">Time Left: 20s</h1>
+
+        <form action="/result" method="post">
+            <!-- Question 1 -->
+            <div id="q1" class="question">
+                <p>1. What is the Full Form of HTML</p>
+                 <label><input type="radio" name="q1" value="a" />Hyper Text Markup Language</label><br>
+                <label><input type="radio" name="q1" value="b" />High Text machine Language</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 2 -->
+            <div id="q2" class="question" style="display: none;">
+                <p>2. Who is the father of HTML?</p>
+                <label><input type="radio" name="q2" value="a" />Tim Berners-Lee</label><br>
+                <label><input type="radio" name="q2" value="b" />Rasmus Lerdorf</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 3 -->
+            <div id="q3" class="question" style="display:none;">
+                <p>3. In which part of the HTML metadata is contained?</p>
+                <label><input type="radio" name="q3" value="a"> head tag</label><br>
+                <label><input type="radio" name="q3" value="b"> title tag</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 4 -->
+            <div id="q4" class="question" style="display:none;">
+                <p>4. Which element is used for or styling HTML5 layout?</p>
+                <label><input type="radio" name="q4" value="a"> CSS</label><br>
+                <label><input type="radio" name="q4" value="b"> JavaScript</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 5 -->
+            <div id="q5" class="question" style="display:none;">
+                <p>5. What is DOM in HTML?</p>
+                <label><input type="radio" name="q5" value="a"> representing and interacting with objects in html document</label><br>
+                <label><input type="radio" name="q5" value="b"> Application programming interface</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 6 -->
+            <div id="q6" class="question" style="display:none;">
+                <p>6. What is a subset of......?</p>
+                <label><input type="radio" name="q6" value="a"> SGML</label><br>
+                <label><input type="radio" name="q6" value="b"> SGMT</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 7 -->
+            <div id="q7" class="question" style="display:none;">
+                <p>7. What is the use of HTML?</p>
+                <label><input type="radio" name="q7" value="a"> Design structure</label><br>
+                <label><input type="radio" name="q7" value="b"> Styling</label><br><br>
+                <button type="button" onclick="nextQuestion()">Submit</button>
+            </div>
+
+            <!-- Question 8 -->
+            <div id="q8" class="question" style="display:none;">
+                <p>8. Which of the following is not used with text-decoration property?</p>
+                <label><input type="radio" name="q8" value="a">inline</label><br>
+                <label><input type="radio" name="q8" value="b"> overline</label><br><br>
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+    <script src="/javascript/timer.js"></script>
+</body>
+
+</html>
