@@ -13,32 +13,45 @@
         <h1 id="timer">Time Left: 20s</h1>
 
         <form action="/result" method="post">
+
+            <input type="hidden" name="name" id="hiddenName"/>
+<input type="hidden" name="email" id="hiddenEmail"/>
+<input type="hidden" name="subject" value="CSS"/>
+
             <!-- Question 1 -->
             <div id="q1" class="question">
                 <p>1. What does CSS stand for?</p>
                  <label><input type="radio" name="q1" value="a" />Cascading Style Sheets</label><br>
-                <label><input type="radio" name="q1" value="b" />Colorful Style Sheets</label><br><br>
+                <label><input type="radio" name="q1" value="b" />Colorful Style Sheets</label><br>
+                 <label><input type="radio" name="q1" value="c" />Creative Style Sheets</label><br>
+                  <label><input type="radio" name="q1" value="d" />Computer Style Sheets</label><br><br>
                 <button type="button" onclick="nextQuestion()">Next</button>
             </div>
             <!-- Question 2 -->
             <div id="q2" class="question" style="display: none;">
                 <p>2. Which property changes an element's background color?</p>
                 <label><input type="radio" name="q2" value="a" />background-color:</label><br>
-                <label><input type="radio" name="q2" value="b" />bgcolor:</label><br><br>
+                <label><input type="radio" name="q2" value="b" />bgcolor:</label><br>
+                <label><input type="radio" name="q2" value="c" />color </label><br>
+                <label><input type="radio" name="q2" value="d" /> background-style</label><br><br>
                 <button type="button" onclick="nextQuestion()">Next</button>
             </div>
             <!-- Question 3 -->
             <div id="q3" class="question" style="display:none;">
                 <p>3. How do you change the text color of an element?</p>
                 <label><input type="radio" name="q3" value="a">color:</label><br>
-                <label><input type="radio" name="q3" value="b"> font-size:</label><br><br>
+                <label><input type="radio" name="q3" value="b"> font-size:</label><br>
+                <label><input type="radio" name="q3" value="c">font-color</label><br>
+                <label><input type="radio" name="q3" value="d">style</label><br><br>
                 <button type="button" onclick="nextQuestion()">Next</button>
             </div>
             <!-- Question 4 -->
             <div id="q4" class="question" style="display:none;">
                 <p>4. Which property defines space between content and border?</p>
                 <label><input type="radio" name="q4" value="a"> padding</label><br>
-                <label><input type="radio" name="q4" value="b"> margin</label><br><br>
+                <label><input type="radio" name="q4" value="b"> margin</label><br>
+                <label><input type="radio" name="q4" value="c"> space</label><br>
+                <label><input type="radio" name="q4" value="d"> border</label><br><br>
                 <button type="button" onclick="nextQuestion()">Next</button>
             </div>
 
@@ -46,7 +59,9 @@
             <div id="q5" class="question" style="display:none;">
                 <p>5. Which property controls the stack order of elements??</p>
                 <label><input type="radio" name="q5" value="a"> z-index</label><br>
-                <label><input type="radio" name="q5" value="b"> position</label><br><br>
+                <label><input type="radio" name="q5" value="b"> position</label><br>
+                <label><input type="radio" name="q5" value="c"> stack-index</label><br>
+                <label><input type="radio" name="q5" value="d"> overlap</label><br><br>
                 <button type="button" onclick="nextQuestion()">Next</button>
             </div>
 
@@ -54,7 +69,9 @@
             <div id="q6" class="question" style="display:none;">
                 <p>6. What value makes a table span the full screen width?</p>
                 <label><input type="radio" name="q6" value="a"> 100%</label><br>
-                <label><input type="radio" name="q6" value="b"> 50%</label><br><br>
+                <label><input type="radio" name="q6" value="b"> 50%</label><br>
+                 <label><input type="radio" name="q6" value="c"> 10%</label><br>
+                  <label><input type="radio" name="q6" value="d"> 200%</label><br><br>
                 <button type="button" onclick="nextQuestion()">Next</button>
             </div>
 
@@ -62,7 +79,9 @@
             <div id="q7" class="question" style="display:none;">
                 <p>7. The transparent keyword is equal to which RGBA value?</p>
                 <label><input type="radio" name="q7" value="a"> rgba(0,0,0,0)</label><br>
-                <label><input type="radio" name="q7" value="b"> rgba(255,255,255,1)</label><br><br>
+                <label><input type="radio" name="q7" value="b"> rgba(255,255,255,1)</label><br>
+                <label><input type="radio" name="q7" value="c"> rgba(0,0,255,255)</label><br>
+                <label><input type="radio" name="q7" value="d"> rgba(0,0,0,255)</label><br><br>
                 <button type="button" onclick="nextQuestion()">Submit</button>
             </div>
 
@@ -70,7 +89,9 @@
             <div id="q8" class="question" style="display:none;">
                 <p>8. What is the use of CSS?</p>
                 <label><input type="radio" name="q8" value="a">Styling</label><br>
-                <label><input type="radio" name="q8" value="b"> coloring</label><br><br>
+                <label><input type="radio" name="q8" value="b"> coloring</label><br>
+                 <label><input type="radio" name="q8" value="c">To store data in web forms</label><br>
+                  <label><input type="radio" name="q8" value="d">To make web pages functional with logic</label><br><br>
                 <button type="submit">Submit</button>
             </div>
 

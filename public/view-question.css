@@ -1,0 +1,49 @@
+body{
+    padding: 0;
+    margin: 0;
+   background-image: url("https://www.shutterstock.com/image-vector/sky-blue-colour-background-light-260nw-2192909777.jpg");
+   background-size: cover;
+   font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+#container{
+    width: 80%;
+    margin: 40px auto;
+    background: rgba(245, 245, 245, 0.822);
+    padding: 20px;
+    padding-left: 40px;
+    border-radius: 15px;
+    border: 1px solid #e5e7eb;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+button{
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    padding: 10px 22px;
+    background: #fee2e2;
+    color:#dc2626;
+    border: 1px solid #fca5a5;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    
+
+}
+button:hover{
+    background: #fecaca;
+}

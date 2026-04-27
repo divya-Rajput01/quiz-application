@@ -1,0 +1,64 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: #f4f8ff;
+    font-family: Arial, sans-serif;
+    background-image: url("https://media.istockphoto.com/id/1269552168/photo/abstract-background-color-gradient-light-blue-white.jpg?b=1&s=1024x1024&w=0&k=20&c=2wbhOBQuFQvkECCSH0wtIRZnokhuZsmWc9El1uNZHDc=");
+    background-size: cover;
+}
+h1{
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+
+.container p{
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #64748b;
+}
+.container{
+    width: 400px;
+    background: white;
+    padding: 10px;
+    margin: 50px auto;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#addbtn{
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    background: #2563eb;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+#question,
+#optionA,
+#optionB,
+#optionC, 
+#optionD, 
+#correctAnswer, 
+#subject{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 4px;
+    border: 1px solid #dbeafe;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    display: block;
+}
+
+#addbtn:hover{
+    background: #1d4ed8;
+}
+
+

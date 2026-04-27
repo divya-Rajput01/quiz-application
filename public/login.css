@@ -6,32 +6,46 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("https://t3.ftcdn.net/jpg/05/88/24/10/360_F_588241010_cdQJ2QTsyDtt36jZsAFR45aAXICnPAzR.jpg");
+    background-image: url("https://img.freepik.com/premium-photo/beautiful-illustration-with-smoke-colorful-background_265989-17893.jpg?semt=ais_hybrid&w=740&q=80");
     background-size: cover;
 }
 
-h2 {
+
+h5{
+    color: #ccc;
+}
+
+
+input, select{
+    width: 90%;
+    padding: 10px;
+    margin: 3px 0px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.loginContainer{
+    width: 350px;
+    margin: 60px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+button{
+    width: 95%;
+    padding: 10px;
+    background: #007bff;
     color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 15px;
 }
-
-.loginContainer input {
-    border-radius: 5px;
-    margin: 3px;
-    padding: 5px;
-    width: 250px;
-    padding-left: 10px;
-}
-
-.loginContainer button {
-    padding: 5px;
-    width: 100px;
-    border-radius: 4px;
-}
-
-.loginContainer input:hover {
-    background-color: gainsboro;
-}
-
-.loginContainer button:hover {
-    background-color: gainsboro;
+button:hover{
+    background: #0056b3;
 }

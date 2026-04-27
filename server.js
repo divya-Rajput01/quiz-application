@@ -2,6 +2,7 @@ import express from 'express'
 import dbConnection from './db.js'
 
 import path from 'path'
+import { ObjectId } from 'mongodb';
 
 const app = express()
 dbConnection();
@@ -19,13 +20,51 @@ app.get('/login', async(req, resp) => {
 })
 
 app.post('/quizcategory',async(req,resp)=>{
-const { name,email } = req.body;
+const { name,email,role } = req.body;
 const db =await dbConnection()
 const collection = db.collection("users")
-await collection.insertOne({name, email})
-console.log("user login saved")
-resp.sendFile(process.cwd() + '/views/mcqcategory.html')
+await collection.insertOne({name, email, role})
+console.log(name, email, role)
+if(role === "student"){
+  resp.sendFile(process.cwd() + "/views/mcqcategory.html")
+}else if(role === "teacher"){
+  resp.redirect("/teacher-dashboard")
+}else if(role === "faculty"){
+  resp.redirect("/faculty-dashboard")
+}
 })
+
+app.get('/teacher-dashboard',async(req,resp)=>{
+    const db =await dbConnection();
+    const collection = db.collection("results")
+    const results =await collection.find().toArray();
+    resp.render('teacher-dashboard', {results})
+})
+
+app.post('/save-question',async(req,resp)=>{
+    const db = await dbConnection();
+    const collection = db.collection('savequestion')
+    const result = await collection.insertOne(req.body)
+    // resp.render('save-question', {result})
+    console.log(result)
+    resp.send('question add succesfully')
+})
+
+app.get('/view-question',async(req,resp)=>{
+    const db =await dbConnection();
+    const collection = db.collection('savequestion')
+    const results = await collection.find().toArray();
+    resp.render('view-question', {results})
+})
+
+app.post('/delete-question/:id',async(req,resp)=>{
+    const db =await dbConnection();
+    const collection = db.collection('savequestion')
+    const results = await collection.deleteOne({_id: new ObjectId(req.params.id)});
+    console.log("question deleted")
+    resp.redirect('/view-question')
+})
+
 app.get('/quizcategory',(req,resp)=>{
     resp.sendFile(process.cwd() + '/views/mcqcategory.html')
 })
@@ -40,6 +79,22 @@ app.get('/js-quiz',(req,resp)=>{
     resp.sendFile(process.cwd() + '/views/js-quiz.html')
 })
 
+app.get('/faculty-dashboard',(req,resp)=>{
+    resp.render('faculty-dashboard')
+})
+
+app.get('/add-question',(req,resp)=>{
+    resp.render('add-question')
+})
+
+app.get('/view-question',(req,resp)=>{
+    resp.render('view-question')
+})
+
+app.get('/delete-question',(req,resp)=>{
+    resp.render('delete-question')
+})
+
 app.post('/result', async(req, resp) => {
     let score = 0;
     let total = 8;
@@ -52,19 +107,14 @@ app.post('/result', async(req, resp) => {
     if (req.body.q7 === 'a') score++;
     if (req.body.q8 === 'a') score++;
     let wrong = total - score;
-    // let { name,email } = req.body;
+    let date = new Date().toLocaleDateString();
+    let status = score >= 4 ? "Pass" : "Fail";
+    let { name,email,subject } = req.body;
     const db = await dbConnection();
     const collection = db.collection("results");
-    await collection.insertOne({ score, total, wrong });
-    console.log("score saved");
+    await collection.insertOne({date, name, email, subject, total, score, wrong, status });
+    console.log(req.body)
     resp.render("result",{ score, total, wrong});
-//     resp.render('result', { score: score })
-//     let wrong = total-score;
-//     const { name, email } = req.body;
-//     const db = await dbConnection();
-//     const collection = db.collection("results")
-//    await collection.insertOne({score, total, wrong})
-// console.log("score saved")
-// resp.render('result.ejs',{total, score, wrong})
+
 });
 app.listen(3400)

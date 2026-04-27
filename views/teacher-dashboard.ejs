@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="teacher-dashboard.css">
+</head>
+<body>
+    <h2>Student Result</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Sr no.</th>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th>Total</th>
+            <th>Score</th>
+            <th>Wrong</th>
+            <th>Status</th>
+        </tr>
+        <% results.forEach((result, index)=>{ %>
+
+        <tr>
+        <td><%= index + 1 %></td>
+        <td><%= result.date%></td>
+            <td><%= result.name%></td>
+            <td><%= result.email%></td>
+            <td><%= result.subject%></td>
+            <td><%= result.total%></td>
+            <td><%= result.score%></td>
+            <td><%= result.wrong%></td>
+            <td><%= result.status%></td>
+           
+        </tr>
+   <% }) %>
+    </table>
+  
+</body>
+</html>

@@ -1,7 +1,13 @@
+let name = localStorage.getItem("name");
+let email = localStorage.getItem("email");
+
+document.querySelector("#hiddenName").value = name;
+document.querySelector("#hiddenEmail").value = email;
+
+
 let time = 20;
 let timer;
 let current = 1;
-
 function startTimer() {
   time = 20;
   document.querySelector("#timer").style.color = "white";
@@ -56,15 +62,21 @@ function nextQuestion() {
   }
 }
 
-function validate(){
-let name = document.querySelector('#name').value;
-let email = document.querySelector('#email').value;
-if(!name || !email){
-     document.querySelector("#error").innerText = "Please enter name & email";
-    return;
-}
- document.querySelector("#error").innerText = "";
-    document.querySelector('form').submit();
+// function validate(){
+// let name = document.querySelector('#name').value;
+// let email = document.querySelector('#email').value;
+// if(!name || !email){
+//      document.querySelector("#error").innerText = "Please enter name & email";
+//     return;
+// }
+
+// localStorage.setItem("name", name);
+//     localStorage.setItem("email", email);
+//  document.querySelector("#error").innerText = "";
+//     document.querySelector('form').submit();
    
 
-}
+// }
+
+
+

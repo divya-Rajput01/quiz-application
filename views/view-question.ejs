@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Question</title>
+    <link rel="stylesheet" href="view-question.css">
+</head>
+<body>
+  
+    <h1>Saved Questions</h1>
+    <p>Manage and review all your questions</p>
+      <% results.forEach((result, index)=>{ %>
+        <div id="container">
+            <option style="font-weight: 600;"><%= index + 1 %>.  Question: <%= result.question %></option>
+            <option>Option A: <%= result.optionA %></option>
+             <option>Option B: <%= result.optionB %></option>
+              <option>Option C: <%= result.optionC %></option>
+               <option>Option D: <%= result.optionD %></option>
+              <option style="color: rgba(49, 157, 27, 0.591);">Correct Answer: <%= result.correctAnswer %></option>
+              <option>Subject: <%= result.subject %></option>
+              <form action="/delete-question/<%= result._id %>" method="post">
+                <button>Delete</button>
+              </form>
+              
+        </div>
+<% }) %>
+  
+</body>
+</html>
