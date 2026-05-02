@@ -25,7 +25,7 @@ function startTimer() {
     if (time <= 0) {
       clearInterval(timer);
 
-      if (current < 8) {
+      if (current < 20) {
         document.querySelector('#q' + current).style.display = "none";
         current++;
         document.querySelector('#q' + current).style.display = "block";
@@ -51,7 +51,7 @@ function nextQuestion() {
 
   clearInterval(timer); //  important
 
-  if (current < 8) {
+  if (current < 20) {
     document.querySelector('#q' + current).style.display = "none";
     current++;
     document.querySelector('#q' + current).style.display = "block";
@@ -62,21 +62,7 @@ function nextQuestion() {
   }
 }
 
-// function validate(){
-// let name = document.querySelector('#name').value;
-// let email = document.querySelector('#email').value;
-// if(!name || !email){
-//      document.querySelector("#error").innerText = "Please enter name & email";
-//     return;
-// }
 
-// localStorage.setItem("name", name);
-//     localStorage.setItem("email", email);
-//  document.querySelector("#error").innerText = "";
-//     document.querySelector('form').submit();
-   
-
-// }
 
 
 

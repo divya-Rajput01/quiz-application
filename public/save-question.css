@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+     background-image: url("https://e7.pngegg.com/pngimages/701/109/png-clipart-celebrate-celebrate-float-thumbnail.png");
+    background-size: cover;
+}
+
+h1{
+    color: rgb(7, 181, 7); 
+     margin-top: 250px;
+     font-size: 45px;
+}

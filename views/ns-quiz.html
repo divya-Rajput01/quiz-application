@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Security Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+    <div class="quizContainer">
+        <h1 id="timer">Time Left: 20s</h1>
+
+        <form action="/result" method="post">
+
+            <input type="hidden" name="name" id="hiddenName" />
+            <input type="hidden" name="email" id="hiddenEmail" />
+            <input type="hidden" name="subject" value="Network Security" />
+
+            <!-- Question 1 -->
+            <div id="q1" class="question">
+                <p>1. What is the primary objective of network security?</p>
+                <label><input type="radio" name="q1" value="a" />To monitor and prevent illegal access</label><br>
+                <label><input type="radio" name="q1" value="b" />To increase network speed</label><br>
+                <label><input type="radio" name="q1" value="c" />To reduce hardware costs</label><br>
+                <label><input type="radio" name="q1" value="d" />To increase user access</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 2 -->
+            <div id="q2" class="question" style="display: none;">
+                <p>2. Which of the following is NOT a core component of the CIA Triad?</p>
+                <label><input type="radio" name="q2" value="a" />Certification</label><br>
+                <label><input type="radio" name="q2" value="b" />Integrity</label><br>
+                <label><input type="radio" name="q2" value="c" />Confidentiality</label><br>
+                <label><input type="radio" name="q2" value="d" />Availability</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 3 -->
+            <div id="q3" class="question" style="display:none;">
+                <p>3.The process of verifying the identity of a user is known as:</p>
+                <label><input type="radio" name="q3" value="a">Authentication</label><br>
+                <label><input type="radio" name="q3" value="b">Identification</label><br>
+                <label><input type="radio" name="q3" value="c">Authorization</label><br>
+                <label><input type="radio" name="q3" value="d">Validation</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 4 -->
+            <div id="q4" class="question" style="display:none;">
+                <p>4. What type of security is used in a home office?</p>
+                <label><input type="radio" name="q4" value="a">Simple security measures</label><br>
+                <label><input type="radio" name="q4" value="b">Multi-factor authentication only</label><br>
+                <label><input type="radio" name="q4" value="c">No security needed</label><br>
+                <label><input type="radio" name="q4" value="d">Complex firewalls</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 5 -->
+            <div id="q5" class="question" style="display:none;">
+                <p>5. Which protocol is used to secure web communications?</p>
+                <label><input type="radio" name="q5" value="a">HTTPS (SSL/TLS)</label><br>
+                <label><input type="radio" name="q5" value="b">HTTP</label><br>
+                <label><input type="radio" name="q5" value="c">FTP</label><br>
+                <label><input type="radio" name="q5" value="d">TCP</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 6 -->
+            <div id="q6" class="question" style="display:none;">
+                <p>6. A "Firewall" acts as:</p>
+                <label><input type="radio" name="q6" value="a">A barrier between a trusted network and an untrusted network</label><br>
+                <label><input type="radio" name="q6" value="b">A tool to improve internet speed</label><br>
+                <label><input type="radio" name="q6" value="c">A storage device</label><br>
+                <label><input type="radio" name="q6" value="d">A virus remover</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 7 -->
+            <div id="q7" class="question" style="display:none;">
+                <p>7. A program that appears to be legitimate but hides a malicious function is called:</p>
+                <label><input type="radio" name="q7" value="a">Trojan Horse</label><br>
+                <label><input type="radio" name="q7" value="b">Logic Bomb</label><br>
+                <label><input type="radio" name="q7" value="c">Virus</label><br>
+                <label><input type="radio" name="q7" value="d">Worm</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 8 -->
+            <div id="q8" class="question" style="display:none;">
+                <p>8. What does IPS stand for?</p>
+                <label><input type="radio" name="q8" value="a">Intrusion Prevention System</label><br>
+                <label><input type="radio" name="q8" value="b">Internal Protected System</label><br>
+                <label><input type="radio" name="q8" value="c">Internet Protocol Security</label><br>
+                <label><input type="radio" name="q8" value="d">Integrated Password System</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+
+            </div>
+            <!-- Question 9 -->
+            <div id="q9" class="question" style="display: none;">
+                <p>9. Which is not an objective of network security?</p>
+                <label><input type="radio" name="q9" value="a" />Lock</label><br>
+                <label><input type="radio" name="q9" value="b" />Access control</label><br>
+                <label><input type="radio" name="q9" value="c" />Authentication</label><br>
+                <label><input type="radio" name="q9" value="d" />Identification</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 10 -->
+            <div id="q10" class="question" style="display: none;">
+                <p>10. Which of these is a part of network identification?</p>
+                <label><input type="radio" name="q10" value="a" />UserID</label><br>
+                <label><input type="radio" name="q10" value="b" />Password</label><br>
+                <label><input type="radio" name="q10" value="c" />fingerprint</label><br>
+                <label><input type="radio" name="q10" value="d" />OTP</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 11 -->
+            <div id="q11" class="question" style="display:none;">
+                <p>11. The process of verifying the identity of a user.</p>
+                <label><input type="radio" name="q11" value="a">Authentication</label><br>
+                <label><input type="radio" name="q11" value="b">Identification</label><br>
+                <label><input type="radio" name="q11" value="c">Validation</label><br>
+                <label><input type="radio" name="q11" value="d">Verifidation</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 12 -->
+            <div id="q12" class="question" style="display:none;">
+                <p>12. CHAP stands for?</p>
+                <label><input type="radio" name="q12" value="a">Challenge Handshake authentication protocol</label><br>
+                <label><input type="radio" name="q12" value="b">Challenge Hardware authentication protocol</label><br>
+                <label><input type="radio" name="q12" value="c">Circuit Hardware authentication protocol</label><br>
+                <label><input type="radio" name="q12" value="d">Circuit Handshake authentication protocol</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 13 -->
+            <div id="q13" class="question" style="display:none;">
+                <p>13. Security features that control that can access resources in the OS.</p>
+                <label><input type="radio" name="q13" value="a">Access control</label><br>
+                <label><input type="radio" name="q13" value="b">Validation</label><br>
+                <label><input type="radio" name="q13" value="c">Identification</label><br>
+                <label><input type="radio" name="q13" value="d">Authentication</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 14 -->
+            <div id="q14" class="question" style="display:none;">
+                <p>14. An algorithm in encryption is called _____________</p>
+                <label><input type="radio" name="q14" value="a">Cipher</label><br>
+                <label><input type="radio" name="q14" value="b">Procedure</label><br>
+                <label><input type="radio" name="q14" value="c">Algorithm</label><br>
+                <label><input type="radio" name="q14" value="d">Module</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 15 -->
+            <div id="q15" class="question" style="display:none;">
+                <p>15. The information that gets transformed in encryption is ____________</p>
+                <label><input type="radio" name="q15" value="a">Plain text</label><br>
+                <label><input type="radio" name="q15" value="b">Parallel text</label><br>
+                <label><input type="radio" name="q15" value="c">Encrypted text</label><br>
+                <label><input type="radio" name="q15" value="d">Decrypted text</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 16 -->
+            <div id="q16" class="question" style="display:none;">
+                <p>16. WTLS stands for?</p>
+                <label><input type="radio" name="q16" value="a">Wireless Transport Security Layer</label><br>
+                <label><input type="radio" name="q16" value="b">Wireless Transport System Layer</label><br>
+                <label><input type="radio" name="q16" value="c">Wireless Transfer Security Layer</label><br>
+                <label><input type="radio" name="q16" value="d">Wireless Transfer System Layer</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 17 -->
+            <div id="q17" class="question" style="display:none;">
+                <p>17. A small program that changes the way a computer operates.</p>
+                <label><input type="radio" name="q17" value="a">Virus</label><br>
+                <label><input type="radio" name="q17" value="b">Bomb</label><br>
+                <label><input type="radio" name="q17" value="c">Trojan</label><br>
+                <label><input type="radio" name="q17" value="d">Worm</label><br><br>
+               <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 18 -->
+            <div id="q18" class="question" style="display:none;">
+                <p>18. A program that copies itself.</p>
+                <label><input type="radio" name="q18" value="a">Worm</label><br>
+                <label><input type="radio" name="q18" value="b">Bomb</label><br>
+                <label><input type="radio" name="q18" value="c">Trojan</label><br>
+                <label><input type="radio" name="q18" value="d">Virus</label><br><br>
+               <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 19 -->
+            <div id="q19" class="question" style="display:none;">
+                <p>19. Attack in which a user creates a packet that appears to be something else.</p>
+                <label><input type="radio" name="q19" value="a">Spoofing</label><br>
+                <label><input type="radio" name="q19" value="b">Trojan</label><br>
+                <label><input type="radio" name="q19" value="c">E-mail bombing</label><br>
+                <label><input type="radio" name="q19" value="d">Smurfing</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 20 -->
+            <div id="q20" class="question" style="display:none;">
+                <p>20. An attack in which the user receives unwanted amount of e-mails.</p>
+                <label><input type="radio" name="q20" value="a">E-mail bombing</label><br>
+                <label><input type="radio" name="q20" value="b">Denial of service</label><br>
+                <label><input type="radio" name="q20" value="c">Ping storm</label><br>
+                <label><input type="radio" name="q20" value="d">Smurfing</label><br><br>
+               <button type="submit">Submit</button>
+            </div>
+
+</form>
+    </div>
+    <script src="/javascript/timer.js"></script>
+</body>
+
+</html>

@@ -17,15 +17,29 @@ body {
     border: 2px solid gray;
     width: 500px;
 }
-
+/* 
 a {
     text-decoration: none;
     font-size: 30px;
     background-color: lavender;
 
-}
+} */
 
 p {
     font-size: 40px;
     font-weight: 300;
+}
+
+#logoutbtn{
+   padding: 8px 16px;
+  
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.logoutBtn:hover{
+    background: #e60000;
 }

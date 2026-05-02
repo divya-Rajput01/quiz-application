@@ -16,5 +16,5 @@ a{
     color: blue;
 }
 a:hover{
-    color: rgb(0, 119, 255);
+    color: rgba(15, 70, 133, 0.989);
 }

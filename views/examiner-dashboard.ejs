@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faculty Dashboard</title>
+    <link rel="stylesheet" href="examiner-dashboard.css">
 </head>
 <body>
-    <h1>Examiner Dashboard</h1>
-    <button>Add Question</button>
-    <button>View Questions</button>
-    <button>Delete Questions</button>
+    <h1>Welcome Examiner!</h1>
+    <p>Use the options above to manage and view your Question</p>
+   <div class="button-container">
+        <a href="/add-question">
+        <button id="add">Add Question</button>
+    </a>
+        <a href="/view-question">
+        <button id="view">View Question</button>
+    </a>
+    <a href="/login" onclick="localStorage.clear()">
+                <button>Logout</button>
+            </a>
+
+   </div>
+
 </body>
 </html>

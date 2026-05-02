@@ -15,8 +15,12 @@
             <p style="color: blue;">your score is <%= score %></p>
             <h1 style="color: green;">Correct Answers: <%= score %></h1>
             <h1 style="color: red;">Wrong Answers: <%= wrong %></h1>
-            <a href="/quizcategory">Try Again...</a>
         </form>
+         <div> 
+            <a href="/login" onclick="localStorage.clear()">
+                <button id="logoutbtn">Logout</button>
+            </a>
+        </div>
     </div>
 </body>
 

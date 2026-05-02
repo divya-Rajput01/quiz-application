@@ -29,8 +29,8 @@ if(role === "student"){
   resp.sendFile(process.cwd() + "/views/mcqcategory.html")
 }else if(role === "teacher"){
   resp.redirect("/teacher-dashboard")
-}else if(role === "faculty"){
-  resp.redirect("/faculty-dashboard")
+}else if(role === "examiner"){
+  resp.redirect("/examiner-dashboard")
 }
 })
 
@@ -47,7 +47,7 @@ app.post('/save-question',async(req,resp)=>{
     const result = await collection.insertOne(req.body)
     // resp.render('save-question', {result})
     console.log(result)
-    resp.send('question add succesfully')
+    resp.render('save-question',{result})
 })
 
 app.get('/view-question',async(req,resp)=>{
@@ -72,15 +72,17 @@ app.get('/quizcategory',(req,resp)=>{
 app.get('/html-quiz', (req, resp) => {
     resp.sendFile(process.cwd() + '/views/html-quiz.html')
 })
-app.get('/css-quiz',(req,resp)=>{
-    resp.sendFile(process.cwd() + '/views/css-quiz.html')
+app.get('/coa-quiz',(req,resp)=>{
+    resp.sendFile(process.cwd() + '/views/coa-quiz.html')
 })
-app.get('/js-quiz',(req,resp)=>{
-    resp.sendFile(process.cwd() + '/views/js-quiz.html')
+app.get('/dbms-quiz',(req,resp)=>{
+    resp.sendFile(process.cwd() + '/views/dbms-quiz.html')
 })
-
-app.get('/faculty-dashboard',(req,resp)=>{
-    resp.render('faculty-dashboard')
+app.get('/ns-quiz',(req,resp)=>{
+    resp.sendFile(process.cwd() + '/views/ns-quiz.html')
+})
+app.get('/examiner-dashboard',(req,resp)=>{
+    resp.render('examiner-dashboard')
 })
 
 app.get('/add-question',(req,resp)=>{
@@ -97,7 +99,7 @@ app.get('/delete-question',(req,resp)=>{
 
 app.post('/result', async(req, resp) => {
     let score = 0;
-    let total = 8;
+    let total = 20;
     if (req.body.q1 === 'a') score++;
     if (req.body.q2 === 'a') score++;
     if (req.body.q3 === 'a') score++;
@@ -106,9 +108,21 @@ app.post('/result', async(req, resp) => {
     if (req.body.q6 === 'a') score++;
     if (req.body.q7 === 'a') score++;
     if (req.body.q8 === 'a') score++;
+    if (req.body.q9 === 'a') score++;
+    if (req.body.q10 === 'a') score++;
+    if (req.body.q11 === 'a') score++;
+    if (req.body.q12 === 'a') score++;
+    if (req.body.q13 === 'a') score++;
+    if (req.body.q14 === 'a') score++;
+    if (req.body.q15 === 'a') score++;
+    if (req.body.q16 === 'a') score++;
+    if (req.body.q17 === 'a') score++;
+    if (req.body.q18 === 'a') score++;
+    if (req.body.q19 === 'a') score++;
+    if (req.body.q20 === 'a') score++;
     let wrong = total - score;
     let date = new Date().toLocaleDateString();
-    let status = score >= 4 ? "Pass" : "Fail";
+    let status = score >= 10 ? "Pass" : "Fail";
     let { name,email,subject } = req.body;
     const db = await dbConnection();
     const collection = db.collection("results");

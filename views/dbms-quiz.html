@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Management System Mcq</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+    <div class="quizContainer">
+        <h1 id="timer">Time Left: 20s</h1>
+
+        <form action="/result" method="post">
+
+<input type="hidden" name="name" id="hiddenName"/>
+<input type="hidden" name="email" id="hiddenEmail"/>
+<input type="hidden" name="subject" value="DBMS"/>
+
+            <!-- Question 1 -->
+            <div id="q1" class="question">
+                <p>1. What is the full form of DBMS?</p>
+                 <label><input type="radio" name="q1" value="a" />Database Management System</label><br>
+                <label><input type="radio" name="q1" value="b" />Database Management Service</label><br>
+                <label><input type="radio" name="q1" value="c" />Data Backup Management System</label><br>
+                <label><input type="radio" name="q1" value="d" />Data of Binary Management System</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 2 -->
+            <div id="q2" class="question" style="display: none;">
+                <p>2. What is an organized collection of data?</p>
+                <label><input type="radio" name="q2" value="a" />Database</label><br>
+                <label><input type="radio" name="q2" value="b" />Data</label><br>
+                <label><input type="radio" name="q2" value="c" />Data block</label><br>
+                <label><input type="radio" name="q2" value="d" />Data structure</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 3 -->
+            <div id="q3" class="question" style="display:none;">
+                <p>3. Which of the following is not a type of database?</p>
+                <label><input type="radio" name="q3" value="a">Decentralized</label><br>
+                <label><input type="radio" name="q3" value="b">Distributed</label><br>
+                <label><input type="radio" name="q3" value="c" />Network</label><br>
+                <label><input type="radio" name="q3" value="d" />Hierarchical </label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 4 -->
+            <div id="q4" class="question" style="display:none;">
+                <p>4. Which level of abstraction describes how data is actually stored?</p>
+                <label><input type="radio" name="q4" value="a">View Level</label><br>
+                <label><input type="radio" name="q4" value="b">Logical Level</label><br>
+                <label><input type="radio" name="q4" value="c">Physical Level</label><br>
+                <label><input type="radio" name="q4" value="d">Conceptual Level</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 5 -->
+            <div id="q5" class="question" style="display:none;">
+                <p>5. A DBMS acts as an interface between _____ and _____ of an enterprise-class system.</p>
+                <label><input type="radio" name="q5" value="a">Data, User</label><br>
+                <label><input type="radio" name="q5" value="b">Data, Database</label><br>
+                 <label><input type="radio" name="q5" value="c">User, Database</label><br>
+                  <label><input type="radio" name="q5" value="d">User, Data</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 6 -->
+            <div id="q6" class="question" style="display:none;">
+                <p>6. Which of the following is not a function of a DBMS?</p>
+                <label><input type="radio" name="q6" value="a">Managing stored data</label><br>
+                <label><input type="radio" name="q6" value="b">Manipulating data</label><br>
+                <label><input type="radio" name="q6" value="c">Security for stored data</label><br>
+                <label><input type="radio" name="q6" value="d">Analyzing code</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 7 -->
+            <div id="q7" class="question" style="display:none;">
+                <p>7. What is a Data Dictionary?</p>
+                <label><input type="radio" name="q7" value="a">A database that stores all data</label><br>
+                <label><input type="radio" name="q7" value="b">A repository to store information about the database itself (metadata)</label><br>
+                <label><input type="radio" name="q7" value="c">A tool to back up data </label><br>
+                <label><input type="radio" name="q7" value="d">A table that stores user data</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 8 -->
+            <div id="q8" class="question" style="display:none;">
+                <p>8. The ability to modify the internal schema without affecting the conceptual schema is?</p>
+                <label><input type="radio" name="q8" value="a">Logical Data Independence</label><br>
+                <label><input type="radio" name="q8" value="b">Physical Data Independence</label><br>
+                <label><input type="radio" name="q8" value="c">Data Integrity</label><br>
+                <label><input type="radio" name="q8" value="d">Data Security</label><br><br>
+                 <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+             <!-- Question 9 -->
+            <div id="q9" class="question" style="display:none;">
+                <p>9. Who is responsible for authorizing access to the database?</p>
+                <label><input type="radio" name="q9" value="a">Database Designer</label><br>
+                <label><input type="radio" name="q9" value="b">End User</label><br>
+                <label><input type="radio" name="q9" value="c">Database Administrator (DBA)</label><br>
+                <label><input type="radio" name="q9" value="d">Programmer</label><br><br>
+                 <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+             <!-- Question 10 -->
+            <div id="q10" class="question" style="display:none;">
+                <p>10. What does an RDBMS consist of?</p>
+                <label><input type="radio" name="q10" value="a">Collection of Tables</label><br>
+                <label><input type="radio" name="q10" value="b">Collection of Records</label><br>
+                <label><input type="radio" name="q10" value="c">Collection of Keys</label><br>
+                <label><input type="radio" name="q10" value="d">Collection of Fields</label><br><br>
+                 <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+               <!-- Question 11 -->
+            <div id="q11" class="question" style="display:none;">
+                <p>11. What is rows of a relation known as?</p>
+                <label><input type="radio" name="q11" value="a">Tuple</label><br>
+                <label><input type="radio" name="q11" value="b">Degree</label><br>
+                <label><input type="radio" name="q11" value="c">Entity</label><br>
+                <label><input type="radio" name="q11" value="d">None</label><br><br>
+                 <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+             <!-- Question 12 -->
+            <div id="q12" class="question" style="display:none;">
+                <p>12. What is the name of the query that is placed within a WHERE or HAVING clause of another query?</p>
+                <label><input type="radio" name="q12" value="a">Sub query</label><br>
+                <label><input type="radio" name="q12" value="b">Multi query</label><br>
+                <label><input type="radio" name="q12" value="c">Super query</label><br>
+                <label><input type="radio" name="q12" value="d">Master query</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+             <!-- Question 13 -->
+            <div id="q13" class="question" style="display:none;">
+                <p>13. What is the number of tuples of a relation known as?</p>
+                <label><input type="radio" name="q13" value="a">Cardinality</label><br>
+                <label><input type="radio" name="q13" value="b">Column</label><br>
+                <label><input type="radio" name="q13" value="c">Entity</label><br>
+                <label><input type="radio" name="q13" value="d">None</label><br><br>
+                 <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+              <!-- Question 14 -->
+            <div id="q14" class="question" style="display:none;">
+                <p>14. What is a database?</p>
+                <label><input type="radio" name="q14" value="a">Organized collection of data or information that can be accessed, updated, and managed</label><br>
+                <label><input type="radio" name="q14" value="b">Collection of data or information without organizing</label><br>
+                <label><input type="radio" name="q14" value="c">Organized collection of information that cannot be accessed, updated, and managed</label><br>
+                <label><input type="radio" name="q14" value="d">Organized collection of data that cannot be updated</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+              <!-- Question 15 -->
+            <div id="q15" class="question" style="display:none;">
+                <p>15. What is DBMS?</p>
+                <label><input type="radio" name="q15" value="a">DBMS stores, modifies and retrieves data</label><br>
+                <label><input type="radio" name="q15" value="b">DBMS is a high-level language</label><br>
+                <label><input type="radio" name="q15" value="c">DBMS is a collection of queries</label><br>
+                <label><input type="radio" name="q15" value="d">DBMS is a programming language</label><br><br>
+               <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+              <!-- Question 16 -->
+            <div id="q16" class="question" style="display:none;">
+                <p>16. Who created the first DBMS?</p>
+                <label><input type="radio" name="q16" value="a">Charles Bachman</label><br>
+                <label><input type="radio" name="q16" value="b">Charles Babbage</label><br>
+                <label><input type="radio" name="q16" value="c">Edgar Frank Codd</label><br>
+                <label><input type="radio" name="q16" value="d">Sharon B. Codd</label><br><br>
+                 <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+             <!-- Question 17 -->
+            <div id="q17" class="question" style="display:none;">
+                <p>17. Which type of data can be stored in the database?</p>
+                <label><input type="radio" name="q17" value="a">All of the these</label><br>
+                <label><input type="radio" name="q17" value="b">Data in the form of audio or video</label><br>
+                <label><input type="radio" name="q17" value="c">Text, files containing data</label><br>
+                <label><input type="radio" name="q17" value="d">Image oriented data</label><br><br>
+                 <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+             <!-- Question 18 -->
+            <div id="q18" class="question" style="display:none;">
+                <p>18. Which of the following is not a type of database?</p>
+                <label><input type="radio" name="q18" value="a">Decentralized</label><br>
+                <label><input type="radio" name="q18" value="b">Hierarchical</label><br>
+                <label><input type="radio" name="q18" value="c">Network</label><br>
+                <label><input type="radio" name="q18" value="d">Distributed</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+             <!-- Question 19 -->
+            <div id="q19" class="question" style="display:none;">
+                <p>19. Which of the following is not an example of DBMS?</p>
+                <label><input type="radio" name="q19" value="a">Google</label><br>
+                <label><input type="radio" name="q19" value="b">MySQL</label><br>
+                <label><input type="radio" name="q19" value="c">IBM DB2</label><br>
+                <label><input type="radio" name="q19" value="d">Microsoft Acess</label><br><br>
+                 <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+             <!-- Question 20 -->
+            <div id="q20" class="question" style="display:none;">
+                <p>20. Which of the following is a feature of the database?</p>
+                <label><input type="radio" name="q20" value="a">User interface provided</label><br>
+                <label><input type="radio" name="q20" value="b">No-backup for the data stored</label><br>
+                <label><input type="radio" name="q20" value="c">Lack of Authentication</label><br>
+                <label><input type="radio" name="q20" value="d">Store data in multiple locations</label><br><br>
+                <button type="submit">Submit</button>
+            </div>
+
+
+        </form>
+    </div>
+    <script src="/javascript/timer.js"></script>
+</body>
+
+</html>

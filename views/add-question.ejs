@@ -11,17 +11,18 @@
       <form action="/save-question" method="post">
         <h1>Add Question</h1>
         <p>Fill in the details below to add a new question</p>
-        <input name="question" type="text" placeholder="Enter Question"/>
+        <input id="question" name="question" type="text" placeholder="Enter Question"/>
     <br><br>
-    <input name="optionA" type="text" placeholder="Option A"/>
+    <input id="optionA" name="optionA" type="text" placeholder="Option A"/>
     <br><br>
-    <input name="optionB" type="text" placeholder="Option B"/>
+    <input id="optionB" name="optionB" type="text" placeholder="Option B"/>
     <br><br>
-    <input name="optionC" type="text" placeholder="Option C"/>
+    <input id="optionC" name="optionC" type="text" placeholder="Option C"/>
     <br><br>
-    <input name="optionD" type="text" placeholder="Option D"/>
+    <input id="optionD" name="optionD" type="text" placeholder="Option D"/>
     <br><br>
     <select id="correctAnswer" name="correctAnswer">
+        <option value="">Correct Option</option>
         <option value="A">A</option>
         <option value="B">B</option>
         <option value="C">C</option>
@@ -29,6 +30,7 @@
     </select>
     <br><br>
     <select id="subject" name="subject">
+        <option value="">Subject</option>
         <option value="html">HTML</option>
         <option value="css">CSS</option>
         <option value="javascript">JAVASCRIPT</option>
