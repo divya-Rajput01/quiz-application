@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Analysis and Design Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+    <div class="quizContainer">
+        <h1 id="timer">Time Left: 20s</h1>
+
+        <form action="/result" method="post">
+
+<input type="hidden" name="name" id="hiddenName"/>
+<input type="hidden" name="email" id="hiddenEmail"/>
+<input type="hidden" name="subject" value="System Analysis and Design"/>
+
+            <!-- Question 1 -->
+            <div id="q1" class="question">
+                <p>1. What is a "system analyst"?</p>
+                 <label><input type="radio" name="q1" value="a" />A person who designs systems</label><br>
+                <label><input type="radio" name="q1" value="b" />A person who writes code</label><br>
+                <label><input type="radio" name="q1" value="c" />A user who uses the system</label><br>
+                <label><input type="radio" name="q1" value="d" />A person who manages the database</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 2 -->
+            <div id="q2" class="question" style="display: none;">
+                <p>2. What is the first step in the SDLC?</p>
+                <label><input type="radio" name="q2" value="a" />Problem Identification/Planning</label><br>
+                <label><input type="radio" name="q2" value="b" />System Design</label><br>
+                 <label><input type="radio" name="q2" value="c" />Problem Identification/Planning</label><br>
+                  <label><input type="radio" name="q2" value="d" />Implementation</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 3 -->
+            <div id="q3" class="question" style="display:none;">
+                <p>3. Prototyping is used for:</p>
+                <label><input type="radio" name="q3" value="a">Requirement validation</label><br>
+                <label><input type="radio" name="q3" value="b">Final implementation</label><br>
+                <label><input type="radio" name="q3" value="c">Testing</label><br>
+                <label><input type="radio" name="q3" value="d">Maintenance</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 4 -->
+            <div id="q4" class="question" style="display:none;">
+                <p>4. The waterfall model is also known as:</p>
+                <label><input type="radio" name="q4" value="a">Linear Sequential Model</label><br>
+                <label><input type="radio" name="q4" value="b">Prototyping Model</label><br>
+                 <label><input type="radio" name="q4" value="c">Agile Model</label><br>
+                  <label><input type="radio" name="q4" value="d">Spiral Model</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 5 -->
+            <div id="q5" class="question" style="display:none;">
+                <p>5. The "System Analysis" phase focus on:</p>
+                <label><input type="radio" name="q5" value="a">What the system should do</label><br>
+                <label><input type="radio" name="q5" value="b">How the system works</label><br>
+                <label><input type="radio" name="q5" value="c">Both a and b</label><br>
+                <label><input type="radio" name="q5" value="d">None</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 6 -->
+            <div id="q6" class="question" style="display:none;">
+                <p>6. Joint Application Development (JAD) is a technique for:</p>
+                <label><input type="radio" name="q6" value="a">Requirement Elicitation</label><br>
+                <label><input type="radio" name="q6" value="b">System Design</label><br>
+                <label><input type="radio" name="q6" value="c">Testing</label><br>
+                <label><input type="radio" name="q6" value="d">Implementation</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 7 -->
+            <div id="q7" class="question" style="display:none;">
+                <p>7. Which is not a characteristic of a system?</p>
+                <label><input type="radio" name="q7" value="a">Complexity</label><br>
+                <label><input type="radio" name="q7" value="b">Organization</label><br>
+                 <label><input type="radio" name="q7" value="c">Control</label><br>
+                  <label><input type="radio" name="q7" value="d">Independence</label><br><br>
+                <button type="button" onclick="nextQuestion()">Submit</button>
+            </div>
+
+            <!-- Question 8 -->
+            <div id="q8" class="question" style="display:none;">
+                <p>8. Technical feasibility checks:</p>
+                <label><input type="radio" name="q8" value="a">If the technology is available</label><br>
+                <label><input type="radio" name="q8" value="b">If the organization can afford the system</label><br>
+                 <label><input type="radio" name="q8" value="c">If users will accept the system</label><br>
+                  <label><input type="radio" name="q8" value="d">All of the above</label><br><br>
+                  <button type="button" onclick="nextQuestion()">Next</button>
+                
+            </div>
+            <!-- Question 9 -->
+            <div id="q9" class="question" style="display: none;">
+                <p>9. Cost-benefit analysis is part of:</p>
+                 <label><input type="radio" name="q9" value="a" />Economic Feasibility</label><br>
+                <label><input type="radio" name="q9" value="b" />Technical Feasibility</label><br>
+                 <label><input type="radio" name="q9" value="c" />Operational Feasibility</label><br>
+                  <label><input type="radio" name="q9" value="d" />Schedule Feasibility</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 10 -->
+            <div id="q10" class="question" style="display: none;">
+                <p>10. Which is not a method for fact-finding?</p>
+                <label><input type="radio" name="q10" value="a" />Testing</label><br>
+                <label><input type="radio" name="q10" value="b" />Observation</label><br>
+                <label><input type="radio" name="q10" value="c" />Questionnaire</label><br>
+                <label><input type="radio" name="q10" value="d" />Interview</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 11 -->
+            <div id="q11" class="question" style="display:none;">
+                <p>11. Operational Feasibility refers to:</p>
+                <label><input type="radio" name="q11" value="a">User Acceptance</label><br>
+                <label><input type="radio" name="q11" value="b">Technology</label><br>
+                <label><input type="radio" name="q11" value="c">Time constraint</label><br>
+                <label><input type="radio" name="q11" value="d">Cost and Benefit</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 12 -->
+            <div id="q12" class="question" style="display:none;">
+                <p>12. ……………. is an important factor of management information system.</p>
+                <label><input type="radio" name="q12" value="a">System</label><br>
+                <label><input type="radio" name="q12" value="b">Data</label><br>
+                <label><input type="radio" name="q12" value="c">Process</label><br>
+                <label><input type="radio" name="q12" value="d">All</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 13 -->
+            <div id="q13" class="question" style="display:none;">
+                <p>13. ……….. level supply information to strategic tier for the use of top management.</p>
+                <label><input type="radio" name="q13" value="a">Tactical</label><br>
+                <label><input type="radio" name="q13" value="b">Competitive</label><br>
+                <label><input type="radio" name="q13" value="c">Environmental</label><br>
+                <label><input type="radio" name="q13" value="d">Operational</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 14 -->
+            <div id="q14" class="question" style="display:none;">
+                <p>14. In a DFD external entities are represented by a</p>
+                <label><input type="radio" name="q14" value="a">Rectangle</label><br>
+                <label><input type="radio" name="q14" value="b">Ellipse</label><br>
+                 <label><input type="radio" name="q14" value="c">Circle</label><br>
+                  <label><input type="radio" name="q14" value="d">Diamond shaped box</label><br><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 15 -->
+            <div id="q15" class="question" style="display:none;">
+                <p>15. Use the new system as the same time as the old system to compare the results. This is known as ……</p>
+                <label><input type="radio" name="q15" value="a">Parallel Operation</label><br>
+                <label><input type="radio" name="q15" value="b">Procedure Writing</label><br>
+                <label><input type="radio" name="q15" value="c">Simultaneous processing</label><br>
+                <label><input type="radio" name="q15" value="d">File Conversion</label><br><br>
+                <button type="button" onclick="nextQuestion()">Submit</button>
+            </div>
+
+            <!-- Question 16 -->
+            <div id="q16" class="question" style="display:none;">
+                <p>16. After the design phase the document prepared is known as…</p>
+                <label><input type="radio" name="q16" value="a">design specification</label><br>
+                <label><input type="radio" name="q16" value="b">system specification</label><br>
+                 <label><input type="radio" name="q16" value="c">performance specification</label><br>
+                  <label><input type="radio" name="q16" value="d">None of these</label><br><br>
+              <button type="button" onclick="nextQuestion()">Submit</button>
+            </div>
+              <!-- Question 17 -->
+            <div id="q17" class="question" style="display:none;">
+                <p>17. A data flow can</p>
+                <label><input type="radio" name="q17" value="a">May emanate and terminate in an external entity</label><br>
+                <label><input type="radio" name="q17" value="b">May either emanate or terminate in an external entity but not both</label><br>
+                 <label><input type="radio" name="q17" value="c">Only emanate from an external entity</label><br>
+                  <label><input type="radio" name="q17" value="d">Only terminate in an external entity</label><br><br>
+              <button type="button" onclick="nextQuestion()">Submit</button>
+            </div>
+              <!-- Question 18 -->
+            <div id="q18" class="question" style="display:none;">
+                <p>18. The data Flow Diagram is the basic component of …………… system</p>
+                <label><input type="radio" name="q18" value="a">Logical</label><br>
+                <label><input type="radio" name="q18" value="b">Physical</label><br>
+                 <label><input type="radio" name="q18" value="c">Conceptual</label><br>
+                  <label><input type="radio" name="q18" value="d">None of the above</label><br><br>
+               <button type="button" onclick="nextQuestion()">Submit</button>
+            </div>
+              <!-- Question 19 -->
+            <div id="q19" class="question" style="display:none;">
+                <p>19. Data cannot flow between two data stores because</p>
+                <label><input type="radio" name="q19" value="a">they will get merged</label><br>
+                <label><input type="radio" name="q19" value="b">data can get corrupted</label><br>
+                 <label><input type="radio" name="q19" value="c">a data store is a passive repository of data</label><br>
+                  <label><input type="radio" name="q19" value="d">it is not allowed in DFD</label><br><br>
+               <button type="button" onclick="nextQuestion()">Submit</button>
+            </div>
+              <!-- Question 20 -->
+            <div id="q20" class="question" style="display:none;">
+                <p>20. Actual programming of software code is done during the ____________ step in the SDLC.</p>
+                <label><input type="radio" name="q20" value="a">Development and Documentation</label><br>
+                <label><input type="radio" name="q20" value="b">Design</label><br>
+                 <label><input type="radio" name="q20" value="c">Analysis</label><br>
+                  <label><input type="radio" name="q20" value="d">Maintenance and Evaluation</label><br><br>
+                <button type="submit">Submit</button>
+            </div>
+            
+
+            
+
+        </form>
+    </div>
+    <script src="/javascript/timer.js"></script>
+</body>
+
+</html>

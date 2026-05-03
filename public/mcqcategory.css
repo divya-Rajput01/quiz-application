@@ -1,20 +1,54 @@
+
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    font-family: Arial;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("https://img.freepik.com/premium-photo/beautiful-illustration-with-smoke-colorful-background_265989-17893.jpg?semt=ais_hybrid&w=740&q=80");
-    background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+
+  background: url("https://static.vecteezy.com/system/resources/previews/007/795/906/non_2x/nice-light-blue-and-purple-gradient-background-free-vector.jpg");
+
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 
-a{
-    text-decoration: none;
-    font-size: 25px;
-    color: blue;
+.container {
+  text-align: center;
+  padding-top: 10px;
 }
-a:hover{
-    color: rgba(15, 70, 133, 0.989);
+
+h1 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 400px;
+  margin: 3px auto;
+  padding: 15px 20px;
+
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+
+  transition: 0.3s;
+}
+
+
+.category:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+.category:hover .arrow {
+  transform: translateX(8px);
 }

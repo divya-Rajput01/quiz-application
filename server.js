@@ -81,6 +81,9 @@ app.get('/dbms-quiz',(req,resp)=>{
 app.get('/ns-quiz',(req,resp)=>{
     resp.sendFile(process.cwd() + '/views/ns-quiz.html')
 })
+app.get('/sad-quiz',(req,resp)=>{
+    resp.sendFile(process.cwd() + '/views/sad-quiz.html')
+})
 app.get('/examiner-dashboard',(req,resp)=>{
     resp.render('examiner-dashboard')
 })
